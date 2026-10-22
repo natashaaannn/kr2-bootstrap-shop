@@ -1,336 +1,209 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>Главная — Bootstrap Shop</title>
-
-<link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    rel="stylesheet"
->
-
-<link rel="stylesheet" href="css/custom.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SpookyShop — учебный интернет-магазин костюмов, декора и аксессуаров для Хеллоуина.">
+    <title>Главная — SpookyShop</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
+<body class="bg-white text-dark spooky-home">
 
-<body>
-
-    
-
-<header class="bg-primary text-white py-4">
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3" aria-label="Основная навигация">
     <div class="container">
-        <div class="row align-items-center">
-
-            <div class="col-12 col-md-8">
-                <h1 class="h3 mb-1">Bootstrap Shop</h1>
-
-                <p class="mb-0 opacity-75">
-                    Учебный интернет-магазин на Bootstrap
-                </p>
-            </div>
-
-            <div class="col-12 col-md-4 text-md-end mt-3 mt-md-0">
-                <span class="badge bg-light text-primary">
-                    КР №2
-                </span>
-            </div>
-
-        </div>
-    </div>
-</header>
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">Bootstrap Shop</a>
-
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mainNavbar"
-            aria-controls="mainNavbar"
-            aria-expanded="false"
-            aria-label="Переключить навигацию"
-        >
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
+        <a class="navbar-brand fw-bold" href="index.html">SpookyShop</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Переключить навигацию"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="mainNavbar">
             <ul class="navbar-nav ms-auto">
-
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Главная</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="catalog.html">Каталог</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="product.html">Товар</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="order.html">Заявка</a>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a
-                        class="nav-link dropdown-toggle"
-                        href="#"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                    >
-                        Дополнительно
-                    </a>
-
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a class="dropdown-item" href="catalog.html">
-                                Все товары
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item" href="order.html">
-                                Оформить заявку
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item" href="index.html#popular">
-                                Популярное
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#popular">Популярные товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+                <li class="nav-item"><a class="nav-link" href="order.html">Заказ</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
             </ul>
         </div>
     </div>
 </nav>
+</header>
 
 <main>
-    <section class="container my-5">
-        <div class="row align-items-center g-4">
-
-            <div class="col-12 col-lg-6">
-                <h2 class="display-5 fw-bold">
-                    Учебный каталог товаров на Bootstrap
-                </h2>
-
-                <p class="lead text-muted">
-                    Проект демонстрирует использование Bootstrap-сетки,
-                    адаптивных колонок и базовых utility-классов.
-                </p>
-
-                <a class="btn btn-primary btn-lg" href="catalog.html">
-                    Перейти в каталог
-                </a>
-            </div>
-
-            <div class="col-12 col-lg-6">
-                <div class="p-5 bg-light border rounded text-center">
-                    <p class="mb-0 text-muted">
-                        Здесь может быть изображение, баннер или промо-блок.
-                    </p>
+    <!-- Приветственный блок с фоном из КР1 и адаптивной Bootstrap-сеткой -->
+    <section class="spooky-hero py-5" aria-labelledby="hero-title">
+        <div class="container py-4">
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-lg-6">
+                    <span class="badge badge-orange mb-3">Самое время готовиться к Хеллоуину</span>
+                    <h1 id="hero-title" class="display-5 fw-bold mb-0">Найди свой образ для самой мистической ночи!</h1>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <p class="lead">Карнавальные костюмы, атмосферный декор и аксессуары для незабываемого Хеллоуина.</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a class="btn btn-dark btn-lg" href="catalog.html">Смотреть каталог</a>
+                        </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-<!-- Преимущества магазина -->
-<section class="container my-5">
+    <!-- Дополнительный Bootstrap-компонент Carousel -->
+    <section class="container my-5" aria-labelledby="featured-title">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4">
+            <h2 id="featured-title" class="h2 mb-0">В центре внимания</h2>
+            <span class="text-body-secondary">Листай подборку праздничных товаров</span>
+        </div>
+        <div id="spookyCarousel" class="carousel slide rounded overflow-hidden shadow-sm bg-dark text-white" data-bs-ride="carousel" data-bs-interval="6000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#spookyCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Слайд 1"></button>
+                <button type="button" data-bs-target="#spookyCarousel" data-bs-slide-to="1" aria-label="Слайд 2"></button>
+                <button type="button" data-bs-target="#spookyCarousel" data-bs-slide-to="2" aria-label="Слайд 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container px-5 py-5">
+                        <div class="row align-items-center g-4 justify-content-center">
+                            <div class="col-12 col-md-5 text-center"><img src="images/skeleton.png" class="img-fluid featured-product-image" alt="Костюм скелета"></div>
+                            <div class="col-12 col-md-6 text-center text-md-start pb-4 pb-md-0"><span class="badge badge-orange mb-2">Хит</span><h3 class="h2">Костюм скелета</h3><p>Зловещий образ для тематической вечеринки.</p><p class="fw-bold fs-4">2 990 руб.</p><a href="catalog.html#skeleton" class="btn btn-orange">Смотреть в каталоге</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container px-5 py-5">
+                        <div class="row align-items-center g-4 justify-content-center">
+                            <div class="col-12 col-md-5 text-center"><img src="images/vampire.png" class="img-fluid featured-product-image" alt="Костюм вампира"></div>
+                            <div class="col-12 col-md-6 text-center text-md-start pb-4 pb-md-0"><h3 class="h2">Костюм вампира</h3><p>Готический плащ с багровой подкладкой и высоким воротником.</p><p class="fw-bold fs-4">3 890 руб.</p><a href="catalog.html" class="btn btn-orange">Смотреть в каталоге</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container px-5 py-5">
+                        <div class="row align-items-center g-4 justify-content-center">
+                            <div class="col-12 col-md-5 text-center"><img src="images/ghost.png" class="img-fluid featured-product-image" alt="Костюм привидения"></div>
+                            <div class="col-12 col-md-6 text-center text-md-start pb-4 pb-md-0"><h3 class="h2">Костюм привидения</h3><p>Лёгкая струящаяся мантия для мистического образа.</p><p class="fw-bold fs-4">1 890 руб.</p><a href="catalog.html" class="btn btn-orange">Смотреть в каталоге</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#spookyCarousel" data-bs-slide="prev" aria-label="Предыдущий слайд"><span class="carousel-control-prev-icon" aria-hidden="true"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#spookyCarousel" data-bs-slide="next" aria-label="Следующий слайд"><span class="carousel-control-next-icon" aria-hidden="true"></span></button>
+        </div>
+    </section>
 
-    <h2 class="text-center mb-4">
-        Преимущества магазина
-    </h2>
-
-    <div class="row g-4">
-
-        <!-- Первое преимущество -->
-        <div class="col-12 col-md-4">
-            <div class="border rounded p-4 h-100 text-center">
-
-                <h3 class="h5">
-                    Широкий ассортимент
-                </h3>
-
-                <p class="text-muted mb-0">
-                    Различные товары для покупателей.
-                </p>
-
+    <!-- Атмосферные преимущества на адаптивной Bootstrap-сетке -->
+    <section class="container my-5" id="advantages" aria-labelledby="advantages-title">
+        <h2 class="text-center mb-4" id="advantages-title">Почему выбирают нас?</h2>
+        <div class="row g-4">
+            <div class="col-12 col-md-4">
+                <div class="card h-100 shadow-sm bg-dark text-white border-0"><div class="card-body text-center p-4">
+                    <div class="fs-1 mb-3" aria-hidden="true">🧛</div>
+                    <h3 class="h5">Образы до мурашек</h3>
+                    <p class="text-white-50 mb-0">Скелеты, вампиры и привидения — выбери, кем станешь в самую мистическую ночь.</p>
+                </div></div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card h-100 shadow-sm bg-dark text-white border-0"><div class="card-body text-center p-4">
+                    <div class="fs-1 mb-3" aria-hidden="true">🎃</div>
+                    <h3 class="h5">Дом с привидениями</h3>
+                    <p class="text-white-50 mb-0">Светящиеся тыквы, призрачные свечи и летучие мыши превратят комнату в логово Хеллоуина.</p>
+                </div></div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card h-100 shadow-sm bg-dark text-white border-0"><div class="card-body text-center p-4">
+                    <div class="fs-1 mb-3" aria-hidden="true">🕸️</div>
+                    <h3 class="h5">Магия в деталях</h3>
+                    <p class="text-white-50 mb-0">Ведьмина шляпа, острые клыки и жуткий грим — последние штрихи к твоему образу.</p>
+                </div></div>
             </div>
         </div>
+    </section>
 
-        <!-- Второе преимущество -->
-        <div class="col-12 col-md-4">
-            <div class="border rounded p-4 h-100 text-center">
-
-                <h3 class="h5">
-                    Удобная заявка
-                </h3>
-
-                <p class="text-muted mb-0">
-                    Простая форма оформления заказа.
-                </p>
-
+    <!-- Популярные товары: сохраняем ссылку #popular из меню -->
+    <section class="container my-5" id="popular" aria-labelledby="popular-title">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+            <h2 class="h2 mb-0" id="popular-title">Популярные товары</h2>
+            <a class="btn btn-outline-dark" href="catalog.html">Все товары</a>
+        </div>
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card h-100 shadow-sm bg-dark text-white border-0">
+                    <img src="images/pumpkin.png" class="card-img-top object-fit-contain bg-dark p-2" alt="Тыква Джек LED" loading="lazy">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title h5">Тыква Джек LED</h3>
+                        <p class="card-text text-white-50">Большая керамическая тыква-светильник с вырезанной зловещей ухмылкой и мерцающим огнем.</p>
+                        <p class="fw-bold fs-5 mt-auto">1 590 руб.</p>
+                        <a href="catalog.html#pumpkin" class="btn btn-orange align-self-start">Смотреть в каталоге</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card h-100 shadow-sm bg-dark text-white border-0">
+                    <img src="images/witch.png" class="card-img-top object-fit-contain bg-dark p-2" alt="Шляпа ведьмы" loading="lazy">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title h5">Шляпа ведьмы</h3>
+                        <p class="card-text text-white-50">Остроконечная черная фетровая шляпа с вуалью из кружева и искусственными розами.</p>
+                        <p class="fw-bold fs-5 mt-auto">1 190 руб.</p>
+                        <a href="catalog.html#witch" class="btn btn-orange align-self-start">Смотреть в каталоге</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card h-100 shadow-sm bg-dark text-white border-0">
+                    <img src="images/blood.png" class="card-img-top object-fit-contain bg-dark p-2" alt="Тюбик искусственной крови" loading="lazy">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title h5">Тюбик искусственной крови</h3>
+                        <p class="card-text text-white-50">Густая реалистичная театральная кровь для создания спецэффектов и грима. Смывается водой.</p>
+                        <p class="fw-bold fs-5 mt-auto">490 руб.</p>
+                        <a href="catalog.html#blood" class="btn btn-orange align-self-start">Смотреть в каталоге</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card h-100 shadow-sm bg-dark text-white border-0">
+                    <img src="images/candle.png" class="card-img-top object-fit-contain bg-dark p-2" alt="Жуткие свечи-призраки" loading="lazy">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title h5">Жуткие свечи-призраки</h3>
+                        <p class="card-text text-white-50">Набор из 3 соевых ароматических свечей, выполненных в форме парящих привидений.</p>
+                        <p class="fw-bold fs-5 mt-auto">1 290 руб.</p>
+                        <a href="catalog.html#candle" class="btn btn-orange align-self-start">Смотреть в каталоге</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card h-100 shadow-sm bg-dark text-white border-0">
+                    <img src="images/garland.png" class="card-img-top object-fit-contain bg-dark p-2" alt="Гирлянда Летучие Мыши" loading="lazy">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title h5">Гирлянда Летучие Мыши</h3>
+                        <p class="card-text text-white-50">3-метровая неоновая гирлянда с 20 светящимися ярко-фиолетовыми летучими мышами.</p>
+                        <p class="fw-bold fs-5 mt-auto">1 390 руб.</p>
+                        <a href="catalog.html#garland" class="btn btn-orange align-self-start">Смотреть в каталоге</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card h-100 shadow-sm bg-dark text-white border-0">
+                    <img src="images/scream.png" class="card-img-top object-fit-contain bg-dark p-2" alt="Хоррор-маска Ghostface" loading="lazy">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title h5">Хоррор-маска Ghostface</h3>
+                        <p class="card-text text-white-50">Знаменитая качественная латексная маска маньяка Крик с реалистичным тканевым капюшоном черного цвета.</p>
+                        <p class="fw-bold fs-5 mt-auto">990 руб.</p>
+                        <a href="catalog.html#scream" class="btn btn-orange align-self-start">Смотреть в каталоге</a>
+                    </div>
+                </article>
             </div>
         </div>
-
-        <!-- Третье преимущество -->
-        <div class="col-12 col-md-4">
-            <div class="border rounded p-4 h-100 text-center">
-
-                <h3 class="h5">
-                    Современный интерфейс
-                </h3>
-
-                <p class="text-muted mb-0">
-                    Использование компонентов Bootstrap.
-                </p>
-
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- Популярные товары -->
-<section class="container my-5">
-
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2 class="mb-0">Популярные товары</h2>
-
-        <a class="btn btn-outline-primary" href="catalog.html">
-            Все товары
-        </a>
-    </div>
-
-    <div class="row g-4">
-
-        <!-- Первый товар -->
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="border rounded h-100 p-4">
-
-                <span class="badge bg-success mb-3">
-                    Новинка
-                </span>
-
-                <h3 class="h5">Товар 1</h3>
-
-                <p class="text-muted">
-                    Краткое описание учебного товара.
-                </p>
-
-                <p class="fw-bold mb-3">1000 руб.</p>
-
-                <a class="btn btn-primary" href="product.html">
-                    Подробнее
-                </a>
-
-            </div>
-        </div>
-
-        <!-- Второй товар -->
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="border rounded h-100 p-4">
-
-                <span class="badge bg-warning text-dark mb-3">
-                    Хит
-                </span>
-
-                <h3 class="h5">Товар 2</h3>
-
-                <p class="text-muted">
-                    Краткое описание учебного товара.
-                </p>
-
-                <p class="fw-bold mb-3">1500 руб.</p>
-
-                <a class="btn btn-primary" href="product.html">
-                    Подробнее
-                </a>
-
-            </div>
-        </div>
-
-        <!-- Третий товар -->
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="border rounded h-100 p-4">
-
-                <span class="badge bg-danger mb-3">
-                    Скидка
-                </span>
-
-                <h3 class="h5">Товар 3</h3>
-
-                <p class="text-muted">
-                    Краткое описание учебного товара.
-                </p>
-
-                <p class="fw-bold mb-3">2000 руб.</p>
-
-                <a class="btn btn-primary" href="product.html">
-                    Подробнее
-                </a>
-
-            </div>
-        </div>
-
-    </div>
-
-</section>
+    </section>
+    <section class="container my-5" aria-label="Связаться с нами">
+        <aside class="alert contact-banner mb-0" role="alert">
+            <p class="mb-0">Возникли вопросы по подбору карнавального костюма, качеству грима или доставке декора? Наша команда работает круглосуточно, чтобы ваша мистическая вечеринка прошла идеально. Воспользуйтесь удобным разделом на нашей <a href="contacts.html" class="alert-link">странице Контактов</a>!</p>
+        </aside>
+    </section>
 </main>
 
-
-<!-- Подвал сайта -->
-<footer class="bg-dark text-white py-4 mt-5">
-
-    <div class="container">
-        <div class="row align-items-center g-3">
-
-            <div class="col-12 col-md-6">
-                <p class="mb-0">
-                    &copy; 2026 Bootstrap Shop. Учебный проект.
-                </p>
-            </div>
-
-            <div class="col-12 col-md-6 text-md-end">
-
-                <a
-                    class="text-white text-decoration-none me-3"
-                    href="catalog.html"
-                >
-                    Каталог
-                </a>
-
-                <a
-                    class="text-white text-decoration-none"
-                    href="order.html"
-                >
-                    Заявка
-                </a>
-
-            </div>
-
-        </div>
-    </div>
-
+<footer class="bg-dark text-white text-center py-4 mt-auto">
+    <div class="container"><p class="mb-0">&copy; 2026. Все права защищены.</p></div>
 </footer>
 
-<script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
-</script>
-
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

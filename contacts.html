@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Связаться с магазином хэллоуинского декора SpookyShop.">
+          <title>Контакты — SpookyShop</title>
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  
+</head>
+<body class="spooky-page">
+
+  <header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3" aria-label="Основная навигация">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">SpookyShop</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Переключить навигацию"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#popular">Популярные товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+                <li class="nav-item"><a class="nav-link" href="order.html">Заказ</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</header>
+
+  <main class="container my-5">
+    <!-- Хлебные крошки, как в КР1: без рамки -->
+    <nav aria-label="Хлебные крошки">
+        <ol class="breadcrumb spooky-breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Контакты</li>
+        </ol>
+    </nav>
+
+    <section class="card shadow-sm p-4 p-md-5 mb-4">
+      <h1 class="h2 mb-3">🔮 НАШИ КОНТАКТЫ</h1>
+      <p class="lead">
+        Остались вопросы по ассортименту или хотите обсудить индивидуальный заказ декора для масштабного мероприятия? Свяжитесь с нашей ведьминской службой поддержки любым удобным способом:
+      </p>
+      <ul class="list-unstyled mb-0">
+        <li class="mb-3">
+          📞 <strong>Телефон:</strong> +7 (495) 666-13-14 
+          <button class="btn btn-dark" id="open-callback-dialog" data-bs-toggle="modal" data-bs-target="#order-dialog" type="button">Перезвоните мне 🔮</button>
+        </li>
+        <li>✉️ <strong>Электронная почта:</strong> support@spookyshop.ru</li>
+        <li>📍 <strong>Адрес шоурума:</strong> г. Москва, Проспект Вернадского, д. 26</li>
+      </ul>
+    </section>
+
+    <!-- Оригинальный скрипт Конструктора Яндекс Карт из КР1. Карта по центру. -->
+    <div class="spooky-map mx-auto">
+      <div class="spooky-map-embed">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac8e906100c3353f13039d05bf25da62b9a03183c38d8693435bf102adff0a217&amp;width=540&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+      </div>
+    </div>
+
+    <!-- Карточка 2: Форма обратной связи -->
+    <section class="card shadow-sm p-4 p-md-5 mt-4" id="feedback-section">
+      <h2 class="h3 mb-3">🦇 ОБРАТНАЯ СВЯЗЬ</h2>
+      
+      <form class="d-grid gap-3" id="feedback-form" action="#" method="post" aria-describedby="feedback-success">
+        <div class="d-grid gap-2">
+          <label class="form-label mb-0" for="feedback-name">Ваше имя</label>
+          <input class="form-control" id="feedback-name" type="text" name="name" placeholder="Иван Иванов" autocomplete="name" minlength="2" maxlength="100" required>
+        </div>
+
+        <div class="d-grid gap-2">
+          <label class="form-label mb-0" for="feedback-email">Контактный E-mail</label>
+          <input class="form-control" id="feedback-email" type="email" name="email" placeholder="name@domain.ru" autocomplete="email" required>
+        </div>
+
+        <div class="d-grid gap-2">
+          <label class="form-label mb-0" for="feedback-subject">Цель обращения</label>
+          <select class="form-select" id="feedback-subject" name="subject" required>
+            <option value="">Выберите тему обращения</option>
+            <option value="support">Техническая поддержка портала</option>
+            <option value="order">Вопрос по заказу декора</option>
+            <option value="cooperation">Сотрудничество и реклама</option>
+          </select>
+        </div>
+
+        <div class="d-grid gap-2">
+          <label class="form-label mb-0" for="feedback-message">Текст сообщения</label>
+          <textarea class="form-control" id="feedback-message" name="message" rows="5" placeholder="Опишите ваш запрос..." required></textarea>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" id="feedback-agreement" name="agreement" type="checkbox" required>
+          <label class="form-check-label" for="feedback-agreement">Я согласен на обработку персональных данных</label>
+        </div>
+
+        <button class="btn btn-dark justify-self-start" type="submit">
+          ОТПРАВИТЬ ЗАПРОС 🔮
+        </button>
+      </form>
+
+      <p class="alert alert-success mt-3 mb-0" id="feedback-success" role="status" aria-live="polite" hidden>
+        Данные формы успешно проверены. Отправка на сервер в учебной версии не выполняется.
+      </p>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-4 mt-auto">
+    <div class="container"><p class="mb-0">&copy; 2026. Все права защищены.</p></div>
+</footer>
+
+  <div class="modal fade" id="order-dialog" tabindex="-1" aria-labelledby="order-dialog-title" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-body p-4">
+    <h2 class="modal-title h4 mb-3" id="order-dialog-title">Заказать обратный звонок</h2>
+    
+    <form class="d-grid gap-3" id="callback-form" action="#" method="post" aria-describedby="callback-success">
+      <div class="d-grid gap-2">
+        <label class="form-label mb-0" for="order-name">Имя</label>
+        <input class="form-control" id="order-name" name="name" type="text" placeholder="Введите ваше имя" minlength="2" autocomplete="given-name" required>
+      </div>
+      
+      <div class="d-grid gap-2">
+        <label class="form-label mb-0" for="order-phone">Телефон</label>
+        <input class="form-control" id="order-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (900) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
+      </div>
+      
+      <div class="form-check">
+        <input class="form-check-input" id="order-agreement" name="agreement" type="checkbox" required>
+        <label class="form-check-label" for="order-agreement">Я согласен на обработку персональных данных</label>
+      </div>
+      
+      <div class="d-flex flex-wrap gap-2">
+        <button class="btn btn-outline-secondary" type="button" id="close-order-dialog" data-bs-dismiss="modal">Закрыть</button>
+        <button class="btn btn-dark" type="submit">Перезвоните мне 🔮</button>
+      </div>
+    </form>
+    <p class="alert alert-success mt-3 mb-0" id="callback-success" role="status" aria-live="polite" hidden>Данные формы успешно проверены. Отправка на сервер в учебной версии не выполняется.</p>
+  </div></div></div></div>
+
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
