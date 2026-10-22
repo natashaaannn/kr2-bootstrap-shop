@@ -144,5 +144,9 @@ Bootstrap подключён локально, без CDN:
 ## Автор
 
 ФИО: Захаркина Наталья Дмитриевна
-
 Учебная группа: ЭФБО-04-25
+
+## Ссылки
+
+- Сайт: https://natashaaannn.github.io/kr2-bootstrap-shop/
+- Репозиторий: https://github.com/natashaaannn/kr2-bootstrap-shop
