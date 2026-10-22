@@ -10,108 +10,43 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Товар — Bootstrap Shop</title>
-
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-    >
-
-    <link rel="stylesheet" href="css/custom.css">
-</head>
-
-<body>
+    <title>Костюм скелета — SpookyShop</title>
 
     
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/custom.css">
+
+</head>
+<body class="bg-light">
+
+    
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3" aria-label="Основная навигация">
     <div class="container">
-        <a class="navbar-brand" href="index.html">Bootstrap Shop</a>
-
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mainNavbar"
-            aria-controls="mainNavbar"
-            aria-expanded="false"
-            aria-label="Переключить навигацию"
-        >
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
+        <a class="navbar-brand fw-bold" href="index.html">SpookyShop</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Переключить навигацию"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="mainNavbar">
             <ul class="navbar-nav ms-auto">
-
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Главная</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="catalog.html">Каталог</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" aref="product.html">Товар</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="order.html">Заявка</a>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a
-                        class="nav-link dropdown-toggle"
-                        href="#"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                    >
-                        Дополнительно
-                    </a>
-
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a class="dropdown-item" href="catalog.html">
-                                Все товары
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item" href="order.html">
-                                Оформить заявку
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item" href="index.html#popular">
-                                Популярное
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
+                <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#popular">Популярные товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+                <li class="nav-item"><a class="nav-link" href="order.html">Заказ</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
             </ul>
         </div>
     </div>
 </nav>
+</header>
 
 
 <main class="container my-5">
 
-    <!-- Хлебные крошки -->
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-                <a href="index.html">Главная</a>
-            </li>
-
-            <li class="breadcrumb-item">
-                <a href="catalog.html">Каталог</a>
-            </li>
-
-            <li class="breadcrumb-item active" aria-current="page">
-                Товар 1
-            </li>
+    <!-- Хлебные крошки, как в КР1: без рамки -->
+    <nav aria-label="Хлебные крошки">
+        <ol class="breadcrumb spooky-breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+            <li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Костюм скелета</li>
         </ol>
     </nav>
 
@@ -122,11 +57,7 @@
         <div class="col-12 col-lg-6">
             <div class="card shadow-sm">
 
-                <div class="placeholder-image bg-light border rounded d-flex align-items-center justify-content-center">
-                    <span class="text-muted">
-                        Изображение товара
-                    </span>
-                </div>
+                <img src="images/skeleton.png" class="img-fluid product-detail-image p-2" alt="Костюм скелета">
 
             </div>
         </div>
@@ -134,20 +65,20 @@
         <!-- Описание товара -->
         <div class="col-12 col-lg-6">
 
-            <span class="badge bg-success mb-3">Новинка</span>
+            <span class="badge badge-orange mb-3">Хит</span>
 
-            <h1 class="h2">Товар 1</h1>
+            <h1 class="h2">Костюм скелета</h1>
 
             <p class="lead text-muted">
-                Подробное описание учебного товара для страницы карточки.
+                Облегающий комбинезон со светящимся принтом костей. Эластичный материал не сковывает движения. В комплект входят маска-балаклава и перчатки.
             </p>
 
-            <p class="fs-3 fw-bold">1000 руб.</p>
+            <p class="fs-3 fw-bold">2 990 руб.</p>
 
-            <div class="d-flex gap-2 mb-4">
+            <div class="d-flex flex-wrap gap-2 mb-4">
 
-                <a class="btn btn-primary btn-lg" href="order.html">
-                    Оформить заявку
+                <a class="btn btn-dark btn-lg" href="order.html?product=skeleton">
+                    Заказать
                 </a>
 
                 <a class="btn btn-outline-secondary btn-lg" href="catalog.html">
@@ -156,9 +87,8 @@
 
             </div>
 
-            <div class="alert alert-warning" role="alert">
-                Это учебная карточка товара. Данные используются для
-                демонстрации Bootstrap-компонентов.
+            <div class="alert product-highlight" role="alert">
+                Комбинезон со светящимся принтом дополнит образ для тематической вечеринки.
             </div>
 
         </div>
@@ -177,12 +107,12 @@
 
                     <tr>
                         <th scope="row">Категория</th>
-                        <td>Учебные товары</td>
+                        <td>Костюмы</td>
                     </tr>
 
                     <tr>
                         <th scope="row">Цена</th>
-                        <td>1000 руб.</td>
+                        <td>2 990 руб.</td>
                     </tr>
 
                     <tr>
@@ -190,6 +120,9 @@
                         <td>В наличии</td>
                     </tr>
 
+                    <tr><th scope="row">Материал</th><td>Эластан, полиэстер</td></tr>
+                    <tr><th scope="row">Комплектация</th><td>Комбинезон, маска-балаклава, перчатки</td></tr>
+                    <tr><th scope="row">Уход</th><td>Ручная стирка в прохладной воде</td></tr>
                 </tbody>
 
             </table>
@@ -197,80 +130,46 @@
         </div>
     </section>
 
-<!-- Частые вопросы -->
-<section class="container my-5">
-
-    <h2 class="h4 mb-3">Частые вопросы</h2>
-
+<!-- Частые вопросы о костюме скелета -->
+<section class="my-5" aria-labelledby="faq-title">
+    <h2 class="h4 mb-3" id="faq-title">Частые вопросы о костюме скелета</h2>
     <div class="accordion" id="faqAccordion">
-
-        <!-- Первый вопрос -->
         <div class="accordion-item">
-
             <h3 class="accordion-header">
-                <button
-                    class="accordion-button"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faqOne"
-                    aria-expanded="true"
-                    aria-controls="faqOne"
-                >
-                    Можно ли оформить заявку без регистрации?
-                </button>
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">Что входит в комплект костюма скелета?</button>
             </h3>
-
-            <div
-                id="faqOne"
-                class="accordion-collapse collapse show"
-                data-bs-parent="#faqAccordion"
-            >
-                <div class="accordion-body">
-                    Да, в учебном проекте заявка оформляется без регистрации.
-                </div>
+            <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">В комплект входят комбинезон с принтом костей, маска-балаклава и перчатки.</div>
             </div>
-
         </div>
-
-        <!-- Второй вопрос -->
         <div class="accordion-item">
-
             <h3 class="accordion-header">
-                <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faqTwo"
-                    aria-expanded="false"
-                    aria-controls="faqTwo"
-                >
-                    Где используется Bootstrap?
-                </button>
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">Светится ли рисунок костей в темноте?</button>
             </h3>
-
-            <div
-                id="faqTwo"
-                class="accordion-collapse collapse"
-                data-bs-parent="#faqAccordion"
-            >
-                <div class="accordion-body">
-                    Bootstrap используется для сетки, карточек, форм,
-                    навигации, сообщений и модальных окон.
-                </div>
+            <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Да, костюм украшен люминесцентным принтом костей, который светится в темноте.</div>
             </div>
-
         </div>
-
+        <div class="accordion-item">
+            <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">Как стирать костюм скелета?</button>
+            </h3>
+            <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Рекомендуется ручная стирка в прохладной воде.</div>
+            </div>
+        </div>
     </div>
-
 </section>
 
 </main>
 
+<footer class="bg-dark text-white text-center py-4 mt-auto">
+    <div class="container"><p class="mb-0">&copy; 2026. Все права защищены.</p></div>
+</footer>
 
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
-    </script>
+
+    
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

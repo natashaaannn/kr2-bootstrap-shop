@@ -1,6 +1,8 @@
 
 body {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .placeholder-box {
@@ -12,7 +14,169 @@ body {
 }
 
 .card-img-top {
-    height: 180px;
-    object-fit: cover;
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
 }
 
+.spooky-hero {
+    color: #21180d;
+    background-color: #ffe0a0;
+    background-image:
+        linear-gradient(rgba(255, 244, 214, 0.88), rgba(255, 244, 214, 0.88)),
+        url('../images/fon.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main { flex: 1 0 auto; }
+
+.product-detail-image {
+    width: 100%;
+    height: 520px;
+    object-fit: contain;
+}
+
+[id] { scroll-margin-top: 1.5rem; }
+
+
+.btn-orange {
+    --bs-btn-color: #21180d;
+    --bs-btn-bg: #ff8a24;
+    --bs-btn-border-color: #ff8a24;
+    --bs-btn-hover-color: #21180d;
+    --bs-btn-hover-bg: #ff9d47;
+    --bs-btn-hover-border-color: #ff9d47;
+    --bs-btn-focus-shadow-rgb: 255, 138, 36;
+    --bs-btn-active-color: #21180d;
+    --bs-btn-active-bg: #ef7611;
+    --bs-btn-active-border-color: #ef7611;
+}
+
+.contact-banner {
+    --bs-alert-color: #21180d;
+    --bs-alert-bg: #ff9d47;
+    --bs-alert-border-color: #ff8a24;
+    --bs-alert-link-color: #21180d;
+}
+
+
+.spooky-page {
+    background-color: #ffe0a0;
+    background-image: url('../images/fon.png');
+    /* Как в КР1: фон привязан к окну, а не к меняющейся высоте каталога. */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.spooky-panel {
+    background-color: rgba(255, 250, 240, 0.96);
+    border: 1px solid rgba(166, 78, 12, 0.25);
+}
+
+.spooky-page .card {
+    border-color: rgba(166, 78, 12, 0.25);
+}
+
+.badge-orange {
+    background-color: #ff8a24;
+    color: #21180d;
+}
+
+/* Увеличенные изображения */
+.featured-product-image {
+    display: block;
+    width: 100%;
+    height: 440px;
+    object-fit: contain;
+}
+
+@media (max-width: 767.98px) {
+    .featured-product-image {
+        height: 340px;
+    }
+}
+
+
+/* Хлебные крошки */
+.spooky-breadcrumb {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #212529;
+    --bs-breadcrumb-divider: "/";
+}
+
+.spooky-breadcrumb .breadcrumb-item,
+.spooky-breadcrumb .breadcrumb-item.active {
+    color: inherit;
+}
+
+.spooky-breadcrumb .breadcrumb-item a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.spooky-breadcrumb .breadcrumb-item a:hover,
+.spooky-breadcrumb .breadcrumb-item a:focus-visible {
+    color: #bd5100;
+    text-decoration: underline;
+}
+
+.spooky-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    color: inherit;
+    opacity: .75;
+}
+
+.spooky-page .spooky-breadcrumb {
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .85);
+}
+
+.spooky-page .spooky-breadcrumb .breadcrumb-item a:hover,
+.spooky-page .spooky-breadcrumb .breadcrumb-item a:focus-visible {
+    color: #ffb766;
+}
+
+/* Яндекс Карта */
+.spooky-map {
+    width: 100%;
+    max-width: 540px;
+    margin-inline: auto;
+}
+
+.spooky-map-embed {
+    width: 100%;
+    max-width: 540px;
+    min-height: 400px;
+    margin-inline: auto;
+    overflow: hidden;
+    border-radius: .5rem;
+}
+
+.spooky-map-embed > div {
+    max-width: 100%;
+}
+
+.spooky-map-embed iframe {
+    display: block;
+    width: 100% !important;
+    max-width: 100%;
+    height: 400px !important;
+    margin-inline: auto;
+    border: 0;
+    border-radius: .5rem;
+}
+
+@media (max-width: 575.98px) {
+    .spooky-map-embed { min-height: 290px; }
+    .spooky-map-embed iframe { height: 290px !important; }
+}
+
+.product-highlight {
+    color: #21180d;
+    background-color: #ff9d47;
+    border-color: #ff8a24;
+}
