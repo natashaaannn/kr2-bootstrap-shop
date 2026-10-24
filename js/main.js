@@ -33,26 +33,67 @@ if (callbackModal) {
 }
 
 const catalogFilters = document.getElementById('catalogFilters');
+
 if (catalogFilters) {
     const cards = Array.from(document.querySelectorAll('#catalog-products article'));
+    const priceFrom = document.getElementById('price-from');
+    const priceTo = document.getElementById('price-to');
+    const catalogCount = document.getElementById('catalog-count');
+    const catalogEmpty = document.getElementById('catalog-empty');
+
+    const clearPriceError = () => {
+        priceTo.setCustomValidity('');
+    };
+
+    priceFrom.addEventListener('input', clearPriceError);
+    priceTo.addEventListener('input', clearPriceError);
+
     catalogFilters.addEventListener('submit', event => {
         event.preventDefault();
+
+        clearPriceError();
+
         if (!catalogFilters.reportValidity()) return;
-        const selectedTypes = Array.from(catalogFilters.querySelectorAll('[name="type"]:checked'), input => input.value);
-        const selectedStatuses = Array.from(catalogFilters.querySelectorAll('[name="status"]:checked'), input => input.value);
-        const from = document.getElementById('price-from').value;
-        const to = document.getElementById('price-to').value;
+
+        const selectedTypes = Array.from(
+            catalogFilters.querySelectorAll('[name="type"]:checked'),
+            input => input.value
+        );
+
+        const selectedStatuses = Array.from(
+            catalogFilters.querySelectorAll('[name="status"]:checked'),
+            input => input.value
+        );
+
+        const from = priceFrom.value;
+        const to = priceTo.value;
+
         const min = from === '' ? 0 : Number(from);
         const max = to === '' ? Infinity : Number(to);
+
+        if (min > max) {
+            priceTo.setCustomValidity('Максимальная цена не может быть меньше минимальной');
+            priceTo.reportValidity();
+            return;
+        }
+
         let count = 0;
+
         for (const card of cards) {
-            const matches = (!selectedTypes.length || selectedTypes.includes(card.dataset.type))
-                && (!selectedStatuses.length || selectedStatuses.some(status => card.dataset.status.split(' ').includes(status)))
-                && Number(card.dataset.price) >= min && Number(card.dataset.price) <= max;
+            const matches =
+                (!selectedTypes.length || selectedTypes.includes(card.dataset.type)) &&
+                (!selectedStatuses.length || selectedStatuses.some(status =>
+                    card.dataset.status.split(' ').includes(status)
+                )) &&
+                Number(card.dataset.price) >= min &&
+                Number(card.dataset.price) <= max;
+
             card.parentElement.classList.toggle('d-none', !matches);
+
             if (matches) count++;
         }
-        document.getElementById('catalog-count').textContent = `Найдено товаров: ${count}`;
-        document.getElementById('catalog-empty').classList.toggle('d-none', count !== 0);
+
+        catalogCount.textContent = `Найдено товаров: ${count}`;
+        catalogEmpty.classList.toggle('d-none', count !== 0);
     });
 }

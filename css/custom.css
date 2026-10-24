@@ -1,3 +1,8 @@
+:root {
+    --spooky-orange: #ff8a24;
+    --spooky-orange-light: #ff9d47;
+    --spooky-text: #21180d;
+}
 
 body {
     min-height: 100vh;
@@ -20,7 +25,7 @@ body {
 }
 
 .spooky-hero {
-    color: #21180d;
+    color: var(--spooky-text);
     background-color: #ffe0a0;
     background-image:
         linear-gradient(rgba(255, 244, 214, 0.88), rgba(255, 244, 214, 0.88)),
@@ -40,32 +45,29 @@ main { flex: 1 0 auto; }
 
 [id] { scroll-margin-top: 1.5rem; }
 
-
 .btn-orange {
-    --bs-btn-color: #21180d;
-    --bs-btn-bg: #ff8a24;
-    --bs-btn-border-color: #ff8a24;
-    --bs-btn-hover-color: #21180d;
-    --bs-btn-hover-bg: #ff9d47;
-    --bs-btn-hover-border-color: #ff9d47;
+    --bs-btn-color: var(--spooky-text);
+    --bs-btn-bg: var(--spooky-orange);
+    --bs-btn-border-color: var(--spooky-orange);
+    --bs-btn-hover-color: var(--spooky-text);
+    --bs-btn-hover-bg: var(--spooky-orange-light);
+    --bs-btn-hover-border-color: var(--spooky-orange-light);
     --bs-btn-focus-shadow-rgb: 255, 138, 36;
-    --bs-btn-active-color: #21180d;
+    --bs-btn-active-color: var(--spooky-text);
     --bs-btn-active-bg: #ef7611;
     --bs-btn-active-border-color: #ef7611;
 }
 
 .contact-banner {
-    --bs-alert-color: #21180d;
-    --bs-alert-bg: #ff9d47;
-    --bs-alert-border-color: #ff8a24;
-    --bs-alert-link-color: #21180d;
+    --bs-alert-color: var(--spooky-text);
+    --bs-alert-bg: var(--spooky-orange-light);
+    --bs-alert-border-color: var(--spooky-orange);
+    --bs-alert-link-color: var(--spooky-text);
 }
-
 
 .spooky-page {
     background-color: #ffe0a0;
     background-image: url('../images/fon.png');
-    /* Как в КР1: фон привязан к окну, а не к меняющейся высоте каталога. */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -82,11 +84,10 @@ main { flex: 1 0 auto; }
 }
 
 .badge-orange {
-    background-color: #ff8a24;
-    color: #21180d;
+    background-color: var(--spooky-orange);
+    color: var(--spooky-text);
 }
 
-/* Увеличенные изображения */
 .featured-product-image {
     display: block;
     width: 100%;
@@ -100,8 +101,6 @@ main { flex: 1 0 auto; }
     }
 }
 
-
-/* Хлебные крошки */
 .spooky-breadcrumb {
     font-size: 0.95rem;
     font-weight: 700;
@@ -140,7 +139,6 @@ main { flex: 1 0 auto; }
     color: #ffb766;
 }
 
-/* Яндекс Карта */
 .spooky-map {
     width: 100%;
     max-width: 540px;
@@ -176,7 +174,7 @@ main { flex: 1 0 auto; }
 }
 
 .product-highlight {
-    color: #21180d;
-    background-color: #ff9d47;
-    border-color: #ff8a24;
+    color: var(--spooky-text);
+    background-color: var(--spooky-orange-light);
+    border-color: var(--spooky-orange);
 }
